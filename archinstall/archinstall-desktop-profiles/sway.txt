@@ -1,0 +1,13 @@
+brightnessctl
+foot
+grim
+pavucontrol
+polkit
+slurp
+sway
+swaybg
+swayidle
+swaylock
+waybar
+wmenu
+xorg-xwayland
