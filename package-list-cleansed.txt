@@ -1,14 +1,10 @@
-alacritty 0.16.1-1
 blender 17:5.0.1-7
 btop 1.4.6-1
 cmake 4.2.3-1
 cmatrix 2.0-4
-code 1.109.5-1
 davinci-resolve 20.3.2-1
 dbeaver 25.3.5-1
 dconf-editor 49.0-1
-discord 1:0.0.127-1
-dolphin 25.12.3-1
 dotnet-sdk 10.0.3.sdk103-1
 emacs 30.2-1
 firefox 148.0-1
