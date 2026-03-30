@@ -2,24 +2,16 @@
     description = "A very basic flake";
 
     inputs = {
-        nixpkgs = {
-            # pin-point version of repo
-            url = "github:nixos/nixpkgs/nixos-25.11";
+        nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+        nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
-            # unstable alternative
-            # url = "github:nixos/nixpkgs?ref=nixos-unstable";
-        };
+        home-manager.url = "github:nix-community/home-manager/release-25.11";
 
-        # home-manager, used for managing user configuration
-        home-manager = {
-            url = "github:nix-community/home-manager/release-25.11";
-
-            # The `follows` keyword in inputs is used for inheritance.
-            # Here, `inputs.nixpkgs` of home-manager is kept consistent with
-            # the `inputs.nixpkgs` of the current flake,
-            # to avoid problems caused by different versions of nixpkgs.
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
+        # The `follows` keyword in inputs is used for inheritance.
+        # Here, `inputs.nixpkgs` of home-manager is kept consistent with
+        # the `inputs.nixpkgs` of the current flake,
+        # to avoid problems caused by different versions of nixpkgs.
+        home-manager.inputs.nixpkgs.follows = "nixpkgs";
     };
 
     outputs = { self, nixpkgs, home-manager, ... }: {
