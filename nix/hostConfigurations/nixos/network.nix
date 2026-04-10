@@ -3,7 +3,7 @@
 
 {
     # Define your hostname.
-    networking.hostName = "nixbtw";
+    networking.hostName = "nixos";
     
     # Enables wireless support via wpa_supplicant.
     # networking.wireless.enable = true;  
