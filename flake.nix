@@ -29,7 +29,6 @@
 
                 modules = [
                     ./nix/hostConfigurations/${hostName}
-                    #./nix/configuration.nix
 
                     let
                         userName = "user1"
