@@ -21,18 +21,25 @@
         #};
 
         nixosConfigurations = {
-            nixbtw = nixpkgs.lib.nixosSystem {
+            nixbtw = let
+                hostName = "nixbtw"
+            in
+            nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
 
                 modules = [
-                    ./nix/configuration.nix
+                    ./nix/hostConfigurations/${hostName}
+                    #./nix/configuration.nix
 
+                    let
+                        userName = "user1"
+                    in
                     home-manager.nixosModules.home-manager
                     {
                         home-manager.useGlobalPkgs = true;
                         home-manager.useUserPackages = true;
 
-                        home-manager.users.user1 = import ./nix/home.nix;
+                        home-manager.users."${userName}" = import ./nix/home.nix;
 
                         # Optionally, use home-manager.extraSpecialArgs to pass
                         # arguments to home.nix
