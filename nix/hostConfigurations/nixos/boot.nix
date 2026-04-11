@@ -4,7 +4,7 @@
 {
     # Bootloader
     boot.loader.grub.enable = true;
-    boot.loader.grub.device = "/dev/vda";
+    boot.loader.grub.device = "/dev/disk/by-uuid/0565-6755";
     boot.loader.grub.useOSProber = true;
 
 
