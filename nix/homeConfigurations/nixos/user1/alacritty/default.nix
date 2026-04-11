@@ -2,18 +2,13 @@
 { config, pkgs, ... }:
 
 {
+    imports = [
+        ./settings-my.nix
+    ];
+
     # alacritty - a cross-platform, GPU-accelerated terminal emulator
     programs.alacritty.enable = true;
 
-    programs.alacritty.settings = {
-        env.TERM = "xterm-256color";
-
-        font = {
-            size = 12;
-            draw_bold_text_with_bright_colors = true;
-        };
-
-        scrolling.multiplier = 5;
-        selection.save_to_clipboard = true;
-    };
+    # Copy catppuccin-mocha
+    home.file.".config/alacritty/catppuccin-mocha.toml".source = ./catppuccin-mocha.toml;
 }

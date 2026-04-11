@@ -23,6 +23,7 @@
 
         ./services
         ./users
+        ./programs
     ];
 
     # Allow unfree packages

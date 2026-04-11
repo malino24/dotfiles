@@ -26,10 +26,23 @@
         options = [ "fmask=0077" "dmask=0077" ];
     };
 
+    # Boot options for fstab. Search up fstab mount options you can use
+    # If you don't have this options attribute, it'll default to "defaults"
+
+    # "users"       # Allows any user to mount and unmount
+    # "nofail"      # Prevent system from failing if this drive doesn't mount
+    # "x-gvfs-show" # To see the disk in your file explorer (ie GNOME Nautilus).
+
+    fileSystems."/mnt/Games" = {
+        device = "/dev/disk/by-uuid/5e42bd38-66a5-459a-aa36-c1d01493847c";
+        fsType = "ext4";
+        options = [ "rw" "relatime" "exec" "users" "nofail" ];
+    };
+
     swapDevices = [
         {
             device = "/dev/nvme1n1p5";
-            size = 1*1024; # 1 GiB
+            # size = 1*1024; # 1 GiB
         }
     ];
 

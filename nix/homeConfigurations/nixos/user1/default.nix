@@ -4,12 +4,14 @@
 {
     imports = [
         ./packages.nix
-        ./git
-        ./starship
+
         ./alacritty
         ./bash
         ./discord
         ./firefox
+        ./git
+        ./starship
+        ./vscode
     ];
 
     home.username = "user1";

@@ -1,0 +1,62 @@
+
+{ config, pkgs, ... }:
+
+{
+    programs.alacritty.settings = {
+        general = {
+            import = [
+                "~/.config/alacritty/catppuccin-mocha.toml"
+            ];
+        };
+
+        terminal = {
+            shell = {
+                program = "tmux";
+                args = [ "new-session" "-A" "-s" "0" ];
+            };
+        };
+
+        # env.TERM = "xterm-256color";
+
+        window = {
+            padding = {
+                x = 17;
+                y = 5;
+            };
+
+            startup_mode = "Maximized";
+        };
+
+        font = {
+            size = 15.0;
+        };
+
+        font.bold = {
+            # family = "MesloLGS Nerd Font Mono";
+            # family = "CaskaydiaCove Nerd Font";
+            family = "Monospace";
+            style = "Bold";
+        };
+
+        font.bold_italic = {
+            # family = "MesloLGS Nerd Font Mono";
+            # family = "CaskaydiaCove Nerd Font";
+            family = "Monospace";
+            style = "Bold Italic";
+        };
+
+        font.italic = {
+            # family = "MesloLGS Nerd Font Mono";
+            # family = "CaskaydiaCove Nerd Font";
+            family = "Monospace";
+            style = "Italic";
+        };
+
+        font.normal = {
+            # family = "MesloLGS Nerd Font Mono";
+            # family = "CaskaydiaCove Nerd Font";
+            family = "Monospace";
+            style = "Regular";
+        };
+    };
+}
