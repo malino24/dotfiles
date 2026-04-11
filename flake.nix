@@ -32,6 +32,8 @@
 
                         home-manager.users."user1" = import ./nix/homeConfigurations/${hostName}/user1;
 
+                        home-manager.backupFileExtension = "bak";
+
                         # Optionally, use home-manager.extraSpecialArgs to pass
                         # arguments to home.nix
                     }
