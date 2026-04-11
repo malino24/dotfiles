@@ -11,6 +11,7 @@
         ./firefox
         ./git
         ./starship
+        ./tmux
         ./vscode
     ];
 
