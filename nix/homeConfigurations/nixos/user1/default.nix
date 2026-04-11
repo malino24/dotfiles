@@ -2,11 +2,13 @@
 { config, pkgs, ... }:
 
 {
-    import = [
+    imports = [
         ./packages.nix
-        ./git.nix
-        ./starship.nix
-        ./discord.nix
+        ./git
+        ./starship
+        ./alacritty
+        ./bash
+        ./discord
     ];
 
     home.username = "user1";

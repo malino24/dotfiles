@@ -8,7 +8,7 @@
         description = "user1";
         extraGroups = [ "networkmanager" "wheel" ];
         packages = with pkgs; [
-            kdePackages.kate
+            # kdePackages.kate
             # thunderbird
         ];
     };

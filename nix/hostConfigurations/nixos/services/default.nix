@@ -1,8 +1,8 @@
 { config, pkgs, ... }:
 
 {
-    import = [
+    imports = [
         ./plasma.nix
         ./openssh.nix
-    ]
+    ];
 }

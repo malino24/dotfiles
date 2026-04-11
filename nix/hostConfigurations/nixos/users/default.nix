@@ -2,7 +2,7 @@
 { config, pkgs, ... }:
 
 {
-    import = [
+    imports = [
         ./user1.nix
-    ]
+    ];
 }
