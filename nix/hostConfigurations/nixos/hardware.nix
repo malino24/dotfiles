@@ -33,11 +33,11 @@
     # "nofail"      # Prevent system from failing if this drive doesn't mount
     # "x-gvfs-show" # To see the disk in your file explorer (ie GNOME Nautilus).
 
-    fileSystems."/mnt/Games" = {
+    /*fileSystems."/mnt/games" = {
         device = "/dev/disk/by-uuid/5e42bd38-66a5-459a-aa36-c1d01493847c";
         fsType = "ext4";
-        options = [ "rw" "relatime" "exec" "users" "nofail" ];
-    };
+        options = [ "rw" "relatime" "exec" ];
+    };*/
 
     swapDevices = [
         {
@@ -47,5 +47,12 @@
     ];
 
     nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+    
+    hardware.graphics = {
+        enable = true;
+        enable32Bit = true;
+    };
+
+    
     hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
