@@ -9,6 +9,7 @@
         ./alacritty
         ./bash
         ./discord
+        ./firefox
     ];
 
     home.username = "user1";
