@@ -33,11 +33,11 @@
     # "nofail"      # Prevent system from failing if this drive doesn't mount
     # "x-gvfs-show" # To see the disk in your file explorer (ie GNOME Nautilus).
 
-    /*fileSystems."/mnt/games" = {
+    fileSystems."/mnt/Games" = {
         device = "/dev/disk/by-uuid/5e42bd38-66a5-459a-aa36-c1d01493847c";
         fsType = "ext4";
         options = [ "rw" "relatime" "exec" ];
-    };*/
+    };
 
     swapDevices = [
         {
