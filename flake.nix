@@ -27,15 +27,17 @@
 
                     home-manager.nixosModules.home-manager
                     {
-                        home-manager.useGlobalPkgs = true;
-                        home-manager.useUserPackages = true;
+                        home-manager = {
+                            useGlobalPkgs = true;
+                            useUserPackages = true;
 
-                        home-manager.users."user1" = import ./nix/homeConfigurations/${hostName}/user1;
+                            users."user1" = import ./nix/homeConfigurations/${hostName}/user1;
 
-                        home-manager.backupFileExtension = "bak";
+                            backupFileExtension = "bak";
 
-                        # Optionally, use home-manager.extraSpecialArgs to pass
-                        # arguments to home.nix
+                            # Optionally, use home-manager.extraSpecialArgs to pass
+                            # arguments to home.nix
+                        };
                     }
                 ];
             };

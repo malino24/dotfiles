@@ -39,20 +39,12 @@
         options = [ "rw" "relatime" "exec" ];
     };
 
-    swapDevices = [
+    /*swapDevices = [
         {
             device = "/dev/nvme1n1p5";
             # size = 1*1024; # 1 GiB
         }
-    ];
+    ];*/
 
     nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-    
-    hardware.graphics = {
-        enable = true;
-        enable32Bit = true;
-    };
-
-    
-    hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
