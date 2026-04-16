@@ -15,7 +15,7 @@ padding = { x = 17, y = 5 }
 startup_mode = "Maximized"
 
 [font]
-size = 15.0
+size = 20.0
 # family = "MesloLGS Nerd Font Mono"
 # family = "CaskaydiaCove Nerd Font"
 # family = "Monospace"

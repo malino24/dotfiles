@@ -2,9 +2,7 @@ if status is-interactive
 # Commands to run in interactive sessions can go here
 end
 
-# alias ls='eza'
-# alias ll='eza -bplah'
+alias ls='eza'
+alias ll='eza --long --git'
 
-alias starship-init='STARSHIP_CONFIG=~/.config/starship.toml starship init fish | source'
-
-starship-init
+oh-my-posh init fish | source
