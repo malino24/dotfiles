@@ -1,6 +1,7 @@
 [general]
 import = [
-  # "~/.config/alacritty/catppuccin-mocha.toml"
+  # "~/.config/alacritty/themes/catppuccin-mocha.toml"
+  "~/.config/alacritty/themes/default.toml"
 ]
 
 [terminal]
@@ -15,23 +16,24 @@ startup_mode = "Maximized"
 
 [font]
 size = 15.0
-
-[font.bold]
 # family = "MesloLGS Nerd Font Mono"
 # family = "CaskaydiaCove Nerd Font"
 # family = "Monospace"
-family = "JetBrains Mono"
+# family = "JetBrains Mono Nerd Font"
+
+[font.bold]
+family = "JetBrains Mono Nerd Font"
 style = "Bold"
 
 [font.bold_italic]
-family = "JetBrains Mono"
+family = "JetBrains Mono Nerd Font"
 style = "Bold Italic"
 
 [font.italic]
-family = "JetBrains Mono"
+family = "JetBrains Mono Nerd Font"
 style = "Italic"
 
 [font.normal]
-family = "JetBrains Mono"
+family = "JetBrains Mono Nerd Font"
 style = "Regular"
 

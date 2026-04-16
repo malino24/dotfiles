@@ -1,12 +1,12 @@
-#!/bin/bash
+#
+# ~/.bashrc
+#
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-UD=$(eval echo "~")
-
 for i in ~/.config/bash/*.sh; do
-    . $i
+    source $i
 done
 
-#eval "$(starship init bash)"
+exec fish
