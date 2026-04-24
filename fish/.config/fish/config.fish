@@ -1,8 +1,19 @@
 if status is-interactive
-# Commands to run in interactive sessions can go here
+    # Commands to run in interactive sessions can go here
 end
 
-alias ls='eza'
-alias ll='eza --long --git'
+alias cat='bat --paging=never --color=auto --style=plain'
+alias ls='eza --color=auto'
+alias lk='eza --color=auto --long'
+alias ll='eza --color=auto --long --all --classify=always --git'
+alias cd='z'
+alias cdi='zi'
 
-oh-my-posh init fish | source
+alias fzf_bat='fzf --preview="bat --color=always {}"'
+
+alias hg='history | grep'
+alias py='python3'
+
+starship init fish | source
+fzf --fish | source
+zoxide init fish | source

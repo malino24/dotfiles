@@ -1,5 +1,6 @@
+#!/bin/env bash
 
-#!/bin/bash
+# echo "This is alias.sh"
 
 # default args
 alias cp='cp -i'

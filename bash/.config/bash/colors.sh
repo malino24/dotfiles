@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/env bash
 
-. "$(dirname ${BASH_SOURCE[0]})"/functions.sh
+# echo "This is colors.sh"
 
 export COLOR_RESET="$(format reset)"
 

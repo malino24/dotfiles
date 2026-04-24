@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/bin/env bash
+
+# echo "This is prompt.sh"
 
 . "$(dirname ${BASH_SOURCE[0]})"/colors.sh
 
@@ -61,8 +63,9 @@ function my_prompt {
 }
 
 #export PS1='\u@\h:\w\$ '   # default in Debian?
-#export PS1='[\u@\h \W]\$ ' # default in Arch
-export PS1='$(my_prompt)'
+export PS1='[\u@\h \W]\$ ' # default in Arch
+
+#export PS1='$(my_prompt)'
 export PS2="> "
 export PS3="#? "
 export PS4="++ "

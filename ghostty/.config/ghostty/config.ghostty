@@ -1,0 +1,15 @@
+# theme = Dracula
+# theme = Dracula+
+# theme = Material Darker
+# theme = Catppuccin Mocha
+
+theme = Material Darker
+
+font-family = JetBrainsMono Nerd Font
+font-size = 20
+
+title = "Ghostty"
+maximize = true
+
+window-padding-x = 15
+window-padding-y = 10

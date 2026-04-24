@@ -1,0 +1,58 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# User: (Success)
+# user1 ~/dotfiles y
+# $
+
+# User: (Error)
+# user1 ~/dotfiles n (130)
+# $ 
+
+add_newline = true
+
+format = """
+$username\
+$directory\
+$git_branch\
+$status
+${custom.suffix_user}\
+${custom.suffix_root}
+"""
+
+[username]
+disabled = false
+show_always = true
+format = "[$user]($style)"
+style_root = "red"
+style_user = "white"
+
+[directory]
+disabled = false
+format =" [$path]($style)( [$read_only]($read_only_style))"
+style = "bright-blue"
+truncation_length = 0
+truncate_to_repo = true
+truncation_symbol = " "
+
+[git_branch]
+disabled = false
+format = ' [$symbol$branch(:$remote_branch)]($style)'
+style = "purple"
+symbol = " "
+always_show_remote = false
+
+[status]
+disabled = false
+format ="[ \\[$status\\]]($style)"
+success_style = "yellow"
+style = "red"
+
+[custom.suffix_user]
+when = "test $(id -u) -ne 0"
+format = "[\\$]($style) "
+style = "bright-green"
+
+[custom.suffix_root]
+when = "test $(id -u) -eq 0"
+format = "[#]($style) "
+style = "bright-green"

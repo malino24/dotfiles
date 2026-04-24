@@ -1,0 +1,78 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Default fish prompt
+
+# User: (green user, white host, green directory)
+# user1@arch ~>
+
+# Root: (green user, white host, red directory)
+# root@arch ~#
+
+# Features missing:
+# - VCS (currently only limited to the following modules: [ git_branch ])
+
+add_newline = false
+
+format = """
+$username@$hostname \
+${custom.directory_user}${custom.directory_root}\
+$git_branch\
+${custom.status}\
+${custom.suffix_user}${custom.suffix_root}\
+"""
+
+[username]
+disabled = false
+show_always = true
+format = "[$user]($style)"
+style_user = "green"
+style_root = "green"
+
+[hostname]
+disabled = false
+format = "[$ssh_symbol$hostname]($style)"
+style = "white"
+ssh_only = false
+
+[git_branch]
+disabled = false
+format = " [\\($branch(:$remote_branch)\\)]($style)"
+style = ""
+
+[custom.status]
+when = "test $STARSHIP_CMD_STATUS -gt 0"
+shell = ['sh']
+
+command = """
+result=$(~/.config/starship/scripts/map-status-to-signal "$STARSHIP_CMD_STATUS")
+
+if [ "$result" -eq 0 ]; then
+    echo ""
+else
+    echo "$result"
+fi
+
+"""
+format = " [\\[$output\\]]($style)"
+style = "red"
+
+[custom.directory_user]
+when = "test $EUID -ne 0"
+command = "echo $(pwd | sed \"s|$HOME|~|\")"
+format = "[$output]($style)"
+style = "green"
+
+[custom.directory_root]
+when = "test $EUID -eq 0"
+command = "echo $(pwd | sed \"s|$HOME|~|\")"
+format = "[$output]($style)"
+style = "red"
+
+[custom.suffix_user]
+when = "test $(id -u) -ne 0"
+format = "> "
+
+[custom.suffix_root]
+when = "test $(id -u) -eq 0"
+format = "# "
+

@@ -1,0 +1,37 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Default fish prompt
+
+add_newline = false
+
+format = """
+$username@$hostname $directory\
+${custom.final_character_if_user}${custom.final_character_if_root}>
+"""
+
+[username]
+disabled = false
+show_always = true
+format = "[$user]($style)"
+style_user = "green"
+style_root = "red"
+
+[hostname]
+disabled = false
+ssh_only = false
+format = "[$ssh_symbol$hostname]($style)"
+style = "yellow"
+
+[directory]
+disabled = false
+format ="[$path]($style)[$read_only]($read_only_style) "
+truncate_to_repo = true
+truncation_symbol = ""
+
+[custom.final_character_if_user]
+when = 'test $(id -u) -ne 0'
+format = '\$'
+
+[custom.final_character_if_root]
+when = 'test $(id -u) -eq 0'
+format = '#'

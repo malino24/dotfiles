@@ -1,0 +1,18 @@
+# include themes/catppuccin-mocha.conf
+include themes/default-alacritty.conf
+
+shell bash -c 'exec fish'
+shell_integration no-cursor
+
+window_padding_width 5 17
+
+font_family JetBrainsMono Nerd Font
+font_size 20.0
+disable_ligatures never
+
+cursor_shape beam
+
+# BEGIN_KITTY_THEME
+# Alacritty
+include current-theme.conf
+# END_KITTY_THEME

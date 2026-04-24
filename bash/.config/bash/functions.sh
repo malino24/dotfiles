@@ -1,4 +1,6 @@
-#!/bin/sh
+#!/bin/env bash
+
+# echo "This is functions.sh"
 
 format() {
     local res=""
@@ -73,4 +75,18 @@ format() {
         res=${res:0:-1}
         echo -e "\001\033[${res}m\002"
     fi
+}
+
+source_file() {
+    [[ -f "$1" ]] && source "$1"
+}
+
+add_to_path() {
+    case ":$PATH:" in
+        *":$1:"*) 
+            ;;
+        *) 
+            PATH="$PATH:$1"
+            ;;
+    esac
 }
