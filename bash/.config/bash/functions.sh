@@ -86,7 +86,7 @@ add_to_path() {
         *":$1:"*) 
             ;;
         *) 
-            PATH="$PATH:$1"
+            export PATH="$PATH:$1"
             ;;
     esac
 }

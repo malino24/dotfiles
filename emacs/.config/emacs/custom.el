@@ -1,0 +1,17 @@
+;;; -*- lexical-binding: t -*-
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(0blayout all-the-icons-dired base16-theme company eterm-256color
+              evil gruber-darker-theme ido-completing-read+
+              ido-vertical-mode lsp-ui magit material-theme
+              multiple-cursors nerd-icons-dired smex vterm)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

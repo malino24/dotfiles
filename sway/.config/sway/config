@@ -1,19 +1,24 @@
 set $mod Mod4
+set $meta Alt
+set $shift Shift
+set $control Ctrl
 
-set $termNoTmux alacritty --command fish
-set $termYesTmux alacritty
-set $menu wmenu-run -f "Noto Sans,14"
+set $term ghostty
+set $files dolphin ~n
+set $menu bash -l -c 'wmenu-run -f "JetBrainsMono Nerd Font,16"'
 #set $menu wofi --show run
-set $files dolphin ~
+# bemenu
+# fuzzel
+# raffi
 
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 # Wallpaper in /usr/share/backgrounds/sway/
+output DP-2     resolution 1920x1080@144Hz position 0,0    scale 1 bg ~/.config/backgrounds/kisuke.jpg fill
+output HDMI-A-1 resolution 1920x1080@75Hz  position 1920,0 scale 1 bg ~/.config/backgrounds/kisuke.jpg fill
 
-output DP-2     resolution 1920x1080@144Hz position 0,0    scale 1 bg ~/.config/backgrounds/788720.jpg fill
-output HDMI-A-1 resolution 1920x1080@75Hz  position 1920,0 scale 1 bg ~/.config/backgrounds/788720.jpg fill
-
-font pango:CaskaydiaCoveNerdFont Medium 14
-# font pango:NotoColorEmoji Medium 14
+# font pango:JetBrainsMono Nerd Font Medium 16
+font pango:CaskaydiaCoveNerdFont Medium 16
+# font pango:NotoColorEmoji Medium 16
 
 # Custom options
 focus_follows_mouse no
@@ -21,10 +26,22 @@ focus_follows_mouse no
 # Environment
 exec_always {
     setenv QT_QPA_PLATFORMTHEME qt5ct
-    setenv QT_STYLE_OVERRIDE kvantum
+    setenv QT_STYLE_OVERRIDE breeze
 }
 
-exec_always dbus-update-activation-environment --systemd --all
+### Autostart
+
+# GNOME Keyring
+exec gnome-keyring-daemon --start --components=secrets,ssh,pkcs11
+
+# GNOME Polkikt
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+# DBus
+exec dbus-update-activation-environment --systemd --all
+
+# Notification Daemon
+exec mako
 
 ### Idle configuration
 
@@ -45,6 +62,7 @@ exec_always dbus-update-activation-environment --systemd --all
 
 input type:keyboard {
     xkb_layout "de"
+    xkb_numlock enabled
 }
 
 input type:pointer {
@@ -57,18 +75,20 @@ input type:pointer {
 
 ### Key bindings
 
-bindsym $mod+Return exec $termYesTmux
-bindsym $mod+Shift+Return exec $termNoTmux
+bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec $menu
 bindsym $mod+e exec $files
 bindsym $mod+Shift+r reload
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
+bindsym $mod+p exec bash -c 'grim -g "$(slurp)" - | wl-copy --type image/png'
+
 bindsym Print exec sway-screenshot -m output -o ~/Pictures/Screenshots
-bindsym Alt+Print exec sway-screenshot -m window -o ~/Pictures/Screenshots
-bindsym Shift+Print exec sway-screenshot -m region -o ~/Pictures/Screenshots
-bindsym Ctrl+Shift+3 exec wayscriber --active
+bindsym $mod+Print exec sway-screenshot -m window -o ~/Pictures/Screenshots
+bindsym $shift+Print exec sway-screenshot -m region -o ~/Pictures/Screenshots
+
+bindsym $control+Shift+3 exec wayscriber --active
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
@@ -166,9 +186,6 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 
-    # Special key to take a screenshot with grim
-    #bindsym Print exec grim
-
 #
 # Status Bar:
 #
@@ -181,7 +198,7 @@ bar {
     # The default just shows the current date and time.
 
     # default
-    #status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+    # status_command while date +'%Y-%m-%d %X'; do sleep 1; done
 
     # mine
     status_command while date +'%Y-%m-%d %H:%M:%S'; do sleep 1; done

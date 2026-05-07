@@ -56,3 +56,4 @@ style = "bright-green"
 when = "test $(id -u) -eq 0"
 format = "[#]($style) "
 style = "bright-green"
+

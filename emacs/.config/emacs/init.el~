@@ -128,10 +128,8 @@
 (add-hook 'compilation-filter-hook 'my/ansi-color-compilation-filter)
 
 ;; Configure Dired
-(use-package nerd-icons-dired)
-(add-hook 'dired-mode-hook #'nerd-icons-dired-mode)
+(use-package all-the-icons-dired)
 (setq dired-create-destination-dirs 'ask)
-
 
 ;; Custom Keybinds
 (global-set-key (kbd "C-x C-b") 'ibuffer)

@@ -29,7 +29,7 @@ exec_always {
     setenv QT_STYLE_OVERRIDE breeze
 }
 
-### Autostart
+# Autostart
 
 # GNOME Keyring
 exec gnome-keyring-daemon --start --components=secrets,ssh,pkcs11
@@ -37,10 +37,7 @@ exec gnome-keyring-daemon --start --components=secrets,ssh,pkcs11
 # GNOME Polkikt
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
-# DBus
 exec dbus-update-activation-environment --systemd --all
-
-# Notification Daemon
 exec mako
 
 ### Idle configuration
@@ -81,7 +78,7 @@ bindsym $mod+e exec $files
 bindsym $mod+Shift+r reload
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
-bindsym $mod+p exec bash -c 'grim -g "$(slurp)" - | wl-copy --type image/png'
+bindsym $mod+p exec grim -g "$(slurp)" - | wl-copy
 
 bindsym Print exec sway-screenshot -m output -o ~/Pictures/Screenshots
 bindsym $mod+Print exec sway-screenshot -m window -o ~/Pictures/Screenshots

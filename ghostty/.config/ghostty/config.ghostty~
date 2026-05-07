@@ -1,7 +1,9 @@
 # theme = Dracula
 # theme = Dracula+
-theme = Material Darker
+# theme = Material Darker
 # theme = Catppuccin Mocha
+
+theme = Material Darker
 
 font-family = JetBrainsMono Nerd Font
 font-size = 20

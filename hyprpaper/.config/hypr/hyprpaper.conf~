@@ -1,0 +1,5 @@
+wallpaper {
+    monitor = 
+    path = ~/.config/backgrounds/kisuke.jpg
+    fit_mode = cover
+}
