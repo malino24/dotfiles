@@ -4,11 +4,12 @@ theme = Material Darker
 # theme = Catppuccin Mocha
 
 font-family = JetBrainsMono Nerd Font
-font-size = 20
+font-size = 18
 
 title = "Ghostty"
 maximize = true
 
-window-padding-x = 15
-window-padding-y = 10
+window-padding-x = 15,0
+window-padding-y = 10,0
 
+keybind = ctrl+backspace=text:\x1b[127;5u

@@ -76,7 +76,7 @@
 (ido-ubiquitous-mode 1)
 (ido-vertical-mode 1)
 
-(setq ido-vertical-define-keys 'C-n-C-p-up-and-down)
+(setq ido-vertical-define-keys 'C-n-C-p)
 
 (setq ido-auto-merge-delay-time nil)             ; Stop autocorrecting
 (setq ido-auto-merge-work-directories-length -1) ; Stop searching in other directories
@@ -128,8 +128,10 @@
 (add-hook 'compilation-filter-hook 'my/ansi-color-compilation-filter)
 
 ;; Configure Dired
-(use-package all-the-icons-dired)
+(use-package nerd-icons-dired)
+(add-hook 'dired-mode-hook #'nerd-icons-dired-mode)
 (setq dired-create-destination-dirs 'ask)
+
 
 ;; Custom Keybinds
 (global-set-key (kbd "C-x C-b") 'ibuffer)

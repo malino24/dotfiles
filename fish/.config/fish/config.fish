@@ -16,6 +16,7 @@ alias fzfp='fzf --preview="bat --color=always {}"'
 
 alias hg='history | grep'
 alias py='python3'
+alias csr='csharprepl'
 
 starship init fish | source
 fzf --fish | source
