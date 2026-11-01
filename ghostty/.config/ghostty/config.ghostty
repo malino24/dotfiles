@@ -3,6 +3,9 @@
 theme = Material Darker
 # theme = Catppuccin Mocha
 
+command = fish
+shell-integration = fish
+
 font-family = JetBrainsMono Nerd Font
 font-size = 18
 

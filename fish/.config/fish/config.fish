@@ -18,6 +18,8 @@ alias hg='history | grep'
 alias py='python3'
 alias csr='csharprepl'
 
+alias aur-malware-check='bash -c "comm -1 -2 <(pacman -Qq | sort) <(curl -s https://raw.githubusercontent.com/lenucksi/aur-malware-check/refs/heads/master/package_list.txt | sort)"'
+
 starship init fish | source
 fzf --fish | source
 zoxide init fish | source

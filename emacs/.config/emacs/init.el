@@ -4,11 +4,15 @@
 (add-to-list 'load-path "~/.config/emacs/lisp/packages")
 (add-to-list 'custom-theme-load-path "~/.config/emacs/lisp/themes")
 
+;; Use y/n instead of yes/no
+(setq use-short-answers t)
+
 ;; Handle startup screen
 (setq inhibit-startup-screen t)
+(setq visible-bell nil)
 
 ;; Hide menu bar, tool bar, scroll bar
-(setq menu-tool-scroll-bar-enabled nil)
+(setq menu-tool-scroll-bar-enabled t)
 
 (cond
  (menu-tool-scroll-bar-enabled
@@ -24,7 +28,10 @@
 (global-display-line-numbers-mode 1)
 (setq-default display-line-numbers-type 'relative)
 
+;; Save history
 (savehist-mode 1)
+
+;; ???
 (setq-default indent-tabs-mode nil)
 
 ;; Custom keybinds
@@ -132,6 +139,34 @@
 (add-hook 'dired-mode-hook #'nerd-icons-dired-mode)
 (setq dired-create-destination-dirs 'ask)
 
-
 ;; Custom Keybinds
 (global-set-key (kbd "C-x C-b") 'ibuffer)
+
+;; Custom major modes
+(use-package rust-mode)
+
+;; lsp-mode
+(use-package lsp-mode
+  :init
+  ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
+  (setq lsp-keymap-prefix "C-c l")
+
+  :hook (
+         (rust-mode . lsp)
+         (lsp-mode . lsp-enable-which-key-integration))
+
+  :commands lsp)
+
+(setq lsp-eldoc-enable-hover nil)
+(setq lsp-signature-auto-activate nil)
+
+
+;;(use-package lsp-ui
+;;  :commands lsp-ui-mode)
+
+(use-package dap-mode)
+
+(use-package which-key
+    :config
+    (which-key-mode))
+
