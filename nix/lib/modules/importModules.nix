@@ -1,6 +1,6 @@
-{ lib, ... }: dir:
+{ lib, ... }: exclude: dir:
 let
-    isModule = import ./isModule.nix { inherit lib; } dir;
+    isModule = import ./isModule.nix { inherit lib; } dir exclude;
 
     fileNames = lib.filterAttrs isModule (builtins.readDir dir);
     moduleNames = builtins.attrNames fileNames;
