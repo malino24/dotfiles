@@ -10,15 +10,13 @@
     
     outputs = { self, nixpkgs, home-manager, ... } @ inputs: {
         nixosConfigurations = {
-            nixos = let
-                hostName = "nixos";
-            in nixpkgs.lib.nixosSystem {
+            nixos = nixpkgs.lib.nixosSystem {
                 system = "x86_64_linux";
                 
                 specialArgs = { inherit inputs; };
 
                 modules = [
-                    ./nix/hostConfigurations/${hostName}
+                    ./nix/hostConfigurations/nixos
 
                     home-manager.nixosModules.home-manager
                     {
@@ -26,7 +24,7 @@
                         home-manager.useUserPackages = true;
                         home-manager.extraSpecialArgs = { inherit inputs; };
 
-                        home-manager.users.user1 = ./nix/homeConfigurations/${hostName}/user1/home.nix;
+                        home-manager.users.user1 = ./nix/homeConfigurations/nixos/user1/home.nix;
                     }
                 ];
             };
