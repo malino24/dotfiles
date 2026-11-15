@@ -84,6 +84,10 @@
   (lambda ()
     (define-key ido-completion-map (kbd "<C-return>") 'ido-select-text)))
 
+;; Configure smex
+(use-package smex)
+(global-set-key (kbd "M-x") 'smex)
+
 ;; Configure recentf (open recently opened files
 (use-package recentf)
 (recentf-mode 1)
@@ -130,7 +134,7 @@
 (add-hook 'dired-mode-hook #'nerd-icons-dired-mode)
 (setq dired-create-destination-dirs 'ask)
 
-;; Custom Keybinds
+;; Configure ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
 ;; Custom major modes
