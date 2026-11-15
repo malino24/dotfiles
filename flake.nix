@@ -9,11 +9,6 @@
     };
     
     outputs = { self, nixpkgs, home-manager, ... } @ inputs: {
-        packages = builtins.mapAttrs (system: pkgs: {
-            hello = pkgs.hello;
-            default = inputs.self.packages.${system}.hello;
-        }) inputs.nixpkgs.legacyPackages;
-
         nixosConfigurations = {
             nixos = let
                 hostName = "nixos";
