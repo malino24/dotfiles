@@ -25,7 +25,7 @@
 ;; Save history
 (savehist-mode 1)
 
-;; ???
+;; Prevent Emacs from inserting tabs instead of spaces
 (setq-default indent-tabs-mode nil)
 
 ;; Custom keybinds
