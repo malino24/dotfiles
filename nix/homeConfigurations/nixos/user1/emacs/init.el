@@ -69,7 +69,7 @@
 
 ;; Configure theme
 (setq custom-safe-themes 't)
-(use-package gruber-darker-theme)
+;(use-package gruber-darker-theme)
 (use-package base16-theme)
 
 (if (display-graphic-p)
