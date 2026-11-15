@@ -1,5 +1,4 @@
-;;; init.el
-;;; -*- lexical-binding: t; -*-
+;;; init.el -*- lexical-binding: t; -*-
 
 (setq warning-minimum-level :error)
 
