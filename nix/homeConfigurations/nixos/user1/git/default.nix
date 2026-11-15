@@ -7,6 +7,7 @@
 
         settings = {
             alias = {
+                "lol" = "log --oneline";
                 "graph" = "log --all --decorate --oneline --graph";
                 "pushf" = "push --force-if-includes";
             };
