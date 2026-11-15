@@ -67,7 +67,6 @@
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
-    vim
     wget
   ];
 
@@ -78,6 +77,8 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
+
+  programs.vim.enable = true;
 
   # List services that you want to enable:
 
