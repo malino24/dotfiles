@@ -22,6 +22,6 @@
         "gds" = "git diff --staged";
         "ga" = "git add";
         "gc" = "git commit";
-	"gg" = "git graph";
+        "gg" = "git graph";
     };
 }
