@@ -13,6 +13,11 @@
             };
 
             init.defaultBranch = "master";
+
+            user = {
+                 email = "5430788+malino24@users.noreply.github.com";
+                 name = "malino24";
+            };
         };
     };
 
