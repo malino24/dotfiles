@@ -1,20 +1,8 @@
-{ lib, config, pkgs, ... }:
+{ inputs, lib, config, pkgs, ... }:
 let
-    isModule = name: type:
-        if name == "default.nix" then
-            false
-        else if type == "regular" then
-            lib.hasSuffix ".nix" name
-        else if type == "directory" then
-            builtins.pathExists (./. + "/${name}/default.nix")
-        else
-            false;
-
-    fileNames = lib.filterAttrs isModule (builtins.readDir ./.);
-    moduleNames = builtins.attrNames fileNames;
-    modules = map(name: ./. + "/${name}") moduleNames;
+    importModules = import (inputs.self + "/nix/lib/modules/importModules.nix") { inherit lib; };
 in
 {
     home.stateVersion = "26.05";
-    imports = modules;
+    imports = importModules ./.;
 }
