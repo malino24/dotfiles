@@ -1,3 +1,6 @@
+;;; init.el
+;;; -*- lexical-binding: t; -*-
+
 (setq warning-minimum-level :error)
 
 (setq custom-file "~/.config/emacs/custom.el")
