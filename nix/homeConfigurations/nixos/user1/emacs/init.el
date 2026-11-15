@@ -57,12 +57,9 @@
 (use-package gruber-darker-theme)
 (use-package base16-theme)
 
-(setq my-current-gui-theme 'base16-material-darker)
-(setq my-current-tui-theme 'base16-material-darker-tui)
-
 (if (display-graphic-p)
-  (load-theme my-current-gui-theme t)
-  (load-theme my-current-tui-theme t))
+  (load-theme 'base16-material-darker t)
+  (load-theme 'base16-material-darker-tui t))
 
 (set-face-attribute 'line-number nil :background nil)
 (set-fringe-mode 0)
