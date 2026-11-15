@@ -40,8 +40,8 @@
     ('gnu/linux "JetBrainsMono Nerd Font-18"))))
 
 (set-face-attribute 'default nil :height 180)
-(set-face-attribute 'line-number nil :height 180)
-(set-face-attribute 'line-number-current-line nil :height 180)
+(set-face-attribute 'line-number nil :inherit 'default :height 1.0)
+(set-face-attribute 'line-number-current-line nil :inherit 'line-number :height 1.0)
 
 ;; Custom keybinds
 (defun my/duplicate-line (&optional arg)
