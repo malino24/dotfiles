@@ -15,7 +15,7 @@ set $menu bash -l -c 'wmenu-run -f "JetBrainsMono Nerd Font,16"'
 # Wallpaper in /usr/share/backgrounds/sway/
 #output DP-2     resolution 1920x1080@144Hz position 0,0 scale 1 bg ~/.config/backgrounds/kisuke.jpg fill
 #output HDMI-A-1 resolution 1920x1080@75Hz  position 1920,0 scale 1 bg ~/.config/backgrounds/kisuke.jpg fill
-output Virtual-1 resolution 1366x768@60Hz
+output Virtual-1 resolution 1920x955@60Hz
 
 # font pango:JetBrainsMono Nerd Font Medium 16
 font pango:CaskaydiaCoveNerdFont Medium 16
