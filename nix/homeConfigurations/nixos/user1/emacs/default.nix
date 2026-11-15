@@ -1,5 +1,8 @@
 { config, pkgs, ... }:
-
+let
+    baseDir = "${config.home.homeDirectory}/dotfiles/nix/homeConfigurations/nixos/user1/emacs";
+    link = file: config.lib.file.mkOutOfStoreSymlink "${baseDir}/${file}";
+in
 {
     services.emacs.enable = true;
 
@@ -16,6 +19,6 @@
         nerd-fonts.jetbrains-mono
     ];
 
-    xdg.configFile."emacs/init.el".source = ./init.el;
-    xdg.configFile."emacs/lisp/themes/base16-material-darker-tui-theme.el".source = ./lisp/themes/base16-material-darker-tui-theme.el;
+    xdg.configFile."emacs/init.el".source = link "init.el";
+    xdg.configFile."emacs/lisp".source = link "lisp";
 }
