@@ -78,14 +78,7 @@
   #   enableSSHSupport = true;
   # };
 
-  programs.vim.enable = true;
-
-  programs.git.enable = true;
-
   programs.sway.enable = true;
-
-  services.emacs.enable = true;
-  services.emacs.package = pkgs.emacs-pgtk;
 
   # List services that you want to enable:
 
