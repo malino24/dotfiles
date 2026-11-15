@@ -14,17 +14,9 @@
 (setq visible-bell nil)
 
 ;; Hide menu bar, tool bar, scroll bar
-(setq menu-tool-scroll-bar-enabled nil)
-
-(cond
- (menu-tool-scroll-bar-enabled
-  (menu-bar-mode 1)
-  (tool-bar-mode 1)
-  (scroll-bar-mode 1))
- ((not menu-tool-scroll-bar-enabled)
-  (menu-bar-mode -1)
-  (tool-bar-mode -1)
-  (scroll-bar-mode -1)))
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
 
 ;; Show line numbers
 (global-display-line-numbers-mode 1)
