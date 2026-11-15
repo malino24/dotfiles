@@ -1,5 +1,5 @@
 (setq custom-file "~/.config/emacs/custom.el")
-(load custom-file)
+(load custom-file 'noerror)
 
 (add-to-list 'load-path "~/.config/emacs/lisp/packages")
 (add-to-list 'custom-theme-load-path "~/.config/emacs/lisp/themes")
