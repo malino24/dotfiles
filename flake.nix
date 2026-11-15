@@ -24,7 +24,7 @@
                         home-manager.useUserPackages = true;
                         home-manager.extraSpecialArgs = { inherit inputs; };
 
-                        home-manager.users.user1 = ./nix/homeConfigurations/nixos/user1/home.nix;
+                        home-manager.users.user1 = ./nix/homeConfigurations/nixos/user1;
                     }
                 ];
             };

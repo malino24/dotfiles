@@ -1,7 +1,7 @@
 { lib, config, pkgs, ... }:
 let
     isModule = name: type:
-        if name == "home.nix" then
+        if name == "default.nix" then
             false
         else if type == "regular" then
             lib.hasSuffix ".nix" name
