@@ -39,6 +39,14 @@
     ('windows-nt "Consolas-13")
     ('gnu/linux "JetBrainsMono Nerd Font-18"))))
 
+;; Custom keybinds
+(defun my/duplicate-line (&optional arg)
+    (interactive "p")
+    (duplicate-line arg)
+    (next-line arg))
+
+(global-set-key (kbd "C-,") 'my/duplicate-line)
+
 ;; Automaticcally open symlinks from VCS repo's
 (setq vc-follow-symlinks nil)
 
