@@ -14,7 +14,7 @@
 (setq visible-bell nil)
 
 ;; Hide menu bar, tool bar, scroll bar
-(setq menu-tool-scroll-bar-enabled t)
+(setq menu-tool-scroll-bar-enabled nil)
 
 (cond
  (menu-tool-scroll-bar-enabled
