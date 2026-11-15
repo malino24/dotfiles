@@ -8,5 +8,7 @@
     programs.git.enable = true;
 
     services.emacs.enable = true;
-    services.emacs.package = pkgs.emacs-pgtk;
+
+    programs.emacs.enable = true;
+    programs.emacs.package = pkgs.emacs-pgtk;
 }
