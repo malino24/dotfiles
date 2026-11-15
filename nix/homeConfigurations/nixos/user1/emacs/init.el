@@ -155,7 +155,6 @@
 (setq lsp-eldoc-enable-hover nil)
 (setq lsp-signature-auto-activate nil)
 
-
 ;;(use-package lsp-ui
 ;;  :commands lsp-ui-mode)
 
