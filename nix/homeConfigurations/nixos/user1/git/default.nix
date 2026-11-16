@@ -30,5 +30,6 @@
         "gca" = "git commit --amend";
         "gcae" = "git commit --amend --no-edit";
         "gg" = "git graph";
+        "gl" = "git lol";
     };
 }
