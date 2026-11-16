@@ -25,7 +25,7 @@
                          tabs
                          spaces
                          trailing
-                         lines
+                         ;lines
                          space-before-tab
                          newline
                          indentation
