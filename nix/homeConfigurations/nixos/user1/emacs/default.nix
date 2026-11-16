@@ -17,6 +17,7 @@ in
 
     home.packages = with pkgs; [
         nerd-fonts.jetbrains-mono
+        nerd-fonts.caskaydia-cove
     ];
 
     xdg.configFile."emacs/init.el".source = link "init.el";
