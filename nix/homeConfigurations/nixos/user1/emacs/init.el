@@ -38,6 +38,9 @@
 
 (global-whitespace-mode 1) ; Disabled by default
 
+;; Column number mode
+(column-number-mode 1)
+
 ;; Use y/n instead of yes/no
 (setq use-short-answers t)
 
