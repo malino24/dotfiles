@@ -73,9 +73,7 @@
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 ;; Font
-(add-to-list 'default-frame-alist `(font . ,(pcase system-type
-    ('windows-nt "Consolas-13")
-    ('gnu/linux "JetBrainsMono Nerd Font-18"))))
+(add-to-list 'default-frame-alist '(font . "JetBrainsMono Nerd Font-18"))
 
 (set-face-attribute 'default nil :height 180)
 (set-face-attribute 'line-number nil :inherit 'default :height 1.0)
