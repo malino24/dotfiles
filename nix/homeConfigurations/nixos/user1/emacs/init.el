@@ -1,5 +1,7 @@
 ;;; init.el -*- lexical-binding: t; -*-
 
+(setenv "MANROFFOPT" "-c")
+
 (setq warning-minimum-level :error)
 
 (setq custom-file "~/.config/emacs/custom.el")
