@@ -1,0 +1,38 @@
+[general]
+import = [
+    "~/.config/alacritty/themes/default.toml"
+]
+
+[terminal]
+# shell = { program = "tmux", args = ["new-session", "-A", "-s", "0"] }
+# shell = "sh"
+
+[env]
+# TERM = "xterm-256color"
+
+[window]
+padding = { x = 17, y = 5 }
+startup_mode = "Maximized"
+
+[font]
+size = 20.0
+# family = "MesloLGS Nerd Font Mono"
+# family = "CaskaydiaCove Nerd Font"
+# family = "Monospace"
+# family = "JetBrains Mono Nerd Font"
+
+[font.bold]
+family = "JetBrains Mono Nerd Font"
+style = "Bold"
+
+[font.bold_italic]
+family = "JetBrains Mono Nerd Font"
+style = "Bold Italic"
+
+[font.italic]
+family = "JetBrains Mono Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "JetBrains Mono Nerd Font"
+style = "Regular"
