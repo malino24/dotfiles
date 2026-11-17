@@ -31,5 +31,7 @@
         "gcae" = "git commit --amend --no-edit";
         "gg" = "git graph";
         "gl" = "git lol";
+
+        "cdg" = "cd -- $(git rev-parse --show-toplevel)";
     };
 }
