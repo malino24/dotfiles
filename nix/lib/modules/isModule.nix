@@ -1,5 +1,5 @@
 { lib, ... }: dir: exclude: name: type:
-    if name == "default.nix" || builtins.elem name exclude then
+    if name == "default.nix" || builtins.elem name exclude || lib.hasSuffix ".disabled" name then
         false
     else if type == "regular" then
         lib.hasSuffix ".nix" name
