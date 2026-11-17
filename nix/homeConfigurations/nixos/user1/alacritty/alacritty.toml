@@ -1,6 +1,6 @@
 [general]
 import = [
-    "~/.config/alacritty/themes/default.toml"
+    "~/.config/alacritty/themes/base16-alacritty/colors/base16-material-darker.toml"
 ]
 
 [terminal]

@@ -1,0 +1,3 @@
+[submodule "nix/homeConfigurations/nixos/user1/alacritty/themes/base16-alacritty"]
+	path = nix/homeConfigurations/nixos/user1/alacritty/themes/base16-alacritty
+	url = https://github.com/aarowill/base16-alacritty
