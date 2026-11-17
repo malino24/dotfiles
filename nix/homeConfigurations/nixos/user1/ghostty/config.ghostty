@@ -1,0 +1,18 @@
+# theme = Dracula
+# theme = Dracula+
+theme = Material Darker
+# theme = Catppuccin Mocha
+
+command = fish
+shell-integration = fish
+
+font-family = JetBrainsMono Nerd Font
+font-size = 18
+
+title = "Ghostty"
+maximize = true
+
+window-padding-x = 15,0
+window-padding-y = 10,0
+
+keybind = ctrl+backspace=text:\x1b[127;5u
