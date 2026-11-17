@@ -20,6 +20,11 @@ in
         nerd-fonts.caskaydia-cove
     ];
 
+    programs.ripgrep.arguments = [
+        "--no-heading"
+        "--line-number"
+    ];
+
     xdg.configFile."emacs/init.el".source = link "init.el";
     xdg.configFile."emacs/lisp".source = link "lisp";
 }
