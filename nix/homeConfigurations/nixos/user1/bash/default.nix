@@ -5,12 +5,14 @@
 
     home.shellAliases = {
         "cp" = "cp -i";
-        "grep" = "grep --color=auto";
         "mv" = "mv -i";
         "rm" = "rm -i";
+
         "stow" = "stow -t ~";
 
+        "grep" = "grep --color=auto";
         "ls" = "ls --color=auto";
+
         "ll" = "ls -bplh";
         "la" = "ls -bplah";
 
