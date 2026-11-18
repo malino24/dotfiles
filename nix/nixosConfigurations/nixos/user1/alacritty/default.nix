@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 let
-    baseDir = "${config.home.homeDirectory}/dotfiles/nix/homeConfigurations/nixos/user1/alacritty";
+    baseDir = "${config.home.homeDirectory}/dotfiles/nix/nixosConfigurations/nixos/user1/alacritty";
     link = file: config.lib.file.mkOutOfStoreSymlink "${baseDir}/${file}";
 in
 {

@@ -5,6 +5,7 @@ let
 in
 {
     programs.ghostty.enable = true;
+
     programs.ghostty.enableBashIntegration = true;
     programs.ghostty.enableZshIntegration = true;
     programs.ghostty.enableFishIntegration = true;
