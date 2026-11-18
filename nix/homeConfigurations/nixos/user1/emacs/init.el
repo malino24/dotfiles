@@ -114,6 +114,11 @@
 (require 'use-package)
 (setq use-package-always-ensure t)
 
+;; Configure direnv integration
+(use-package direnv)
+(direnv-mode 1)
+(setq direnv-always-show-summary nil)
+
 ;; Configure theme
 (setq custom-safe-themes 't)
 ;(use-package gruber-darker-theme)
