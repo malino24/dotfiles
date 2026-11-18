@@ -24,12 +24,6 @@ font pango:JetBrainsMono Nerd Font Medium 16
 # Custom options
 focus_follows_mouse no
 
-# Environment
-exec_always {
-    setenv QT_QPA_PLATFORMTHEME qt5ct
-    setenv QT_STYLE_OVERRIDE breeze
-}
-
 ### Autostart
 
 # GNOME Keyring
