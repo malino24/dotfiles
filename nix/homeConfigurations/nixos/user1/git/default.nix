@@ -19,6 +19,13 @@
                  name = "malino24";
             };
         };
+
+        ignores = [
+                # Emacs
+                "*~"
+                "\\#*\\#"
+                ".\\#*"
+        ];
     };
 
     home.shellAliases = {
