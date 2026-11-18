@@ -4,10 +4,6 @@
     programs.bash.enable = true;
 
     home.shellAliases = {
-        "cp" = "cp -i";
-        "mv" = "mv -i";
-        "rm" = "rm -i";
-
         "stow" = "stow -t ~";
 
         "grep" = "grep --color=auto";
