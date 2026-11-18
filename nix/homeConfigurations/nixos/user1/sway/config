@@ -17,8 +17,8 @@ set $menu bash -l -c 'wmenu-run -f "JetBrainsMono Nerd Font,16"'
 #output HDMI-A-1 resolution 1920x1080@75Hz  position 1920,0 scale 1 bg ~/.config/backgrounds/kisuke.jpg fill
 output Virtual-1 resolution --custom 1920x955@60Hz
 
-# font pango:JetBrainsMono Nerd Font Medium 16
-font pango:CaskaydiaCoveNerdFont Medium 16
+font pango:JetBrainsMono Nerd Font Medium 16
+# font pango:CaskaydiaCoveNerdFont Medium 16
 # font pango:NotoColorEmoji Medium 16
 
 # Custom options
