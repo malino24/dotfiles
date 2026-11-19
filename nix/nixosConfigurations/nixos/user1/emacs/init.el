@@ -114,10 +114,8 @@
 (require 'use-package)
 (setq use-package-always-ensure t)
 
-;; Configure direnv integration
-(use-package direnv)
-(direnv-mode 1)
-(setq direnv-always-show-summary nil)
+;; Configure envrc
+(use-package envrc :hook (after-init . envrc-global-mode))
 
 ;; Configure theme
 (setq custom-safe-themes 't)
