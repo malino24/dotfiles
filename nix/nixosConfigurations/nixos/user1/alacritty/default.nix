@@ -7,7 +7,7 @@ in
     programs.alacritty.enable = true;
 
     xdg.configFile."alacritty/alacritty.toml".source = link "alacritty.toml";
-    xdg.configFile."alacritty/themes".source         = ./themes;
+    xdg.configFile."alacritty/themes".source         = link ./themes;
 
     home.packages = with pkgs; [
         nerd-fonts.jetbrains-mono
