@@ -21,10 +21,13 @@
         };
 
         ignores = [
-                # Emacs
+                # emacs
                 "*~"
                 "\\#*\\#"
                 ".\\#*"
+
+                # direnv
+                ".direnv/"
         ];
     };
 
