@@ -12,6 +12,9 @@
         brightnessctl
         swayidle
         swaylock
+
+        # Utils
+        wl-clipboard
         wmenu
 
         # Screenshot
