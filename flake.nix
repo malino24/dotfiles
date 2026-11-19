@@ -10,5 +10,6 @@
     outputs = { self, nixpkgs, home-manager, ... } @ inputs:
     {
         nixosConfigurations = import ./nix/nixosConfigurations inputs;
+        templates = import ./nix/templates { inherit (nixpkgs) lib; };
     };
 }
