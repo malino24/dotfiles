@@ -9,6 +9,7 @@
     };
 
     home.shellAliases = {
+        "cdf" = "cd $NH_FLAKE";
         "nos" = "nh os switch";
     };
 }
