@@ -30,6 +30,7 @@
 
     home.shellAliases = {
         "gs" = "git status";
+        "gss" = "git status --short";
         "gd" = "git diff";
         "gds" = "git diff --staged";
         "ga" = "git add";
