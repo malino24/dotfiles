@@ -3,13 +3,11 @@
 
 ;; Configure theme
 (use-package base16-theme)
-
-(if (display-graphic-p)
-  (load-theme 'base16-material-darker t)
-  (load-theme 'base16-material-darker-tui t))
+(load-theme 'base16-material-darker t)
 
 (set-face-attribute 'line-number nil :background nil)
 (set-fringe-mode 0)
+
 ;; Font
 (add-to-list 'default-frame-alist
              '(font . "JetBrainsMono Nerd Font-18"))
