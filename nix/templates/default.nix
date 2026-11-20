@@ -1,15 +1,14 @@
 { lib, ... }:
 let
     shells = [
-        [ "c"         "C"          ]
-        [ "cpp"       "C++"        ]
-        [ "dotnet"    ".NET"       ]
+        [ "c-cpp"     "C/C++"      ]
+        [ "csharp"    ".NET"       ]
         [ "go"        "Go"         ]
         [ "haskell"   "Haskell"    ]
         [ "java"      "Java"       ]
-        [ "node"      "Node"       ]
         [ "lua"       "Lua"        ]
         [ "nim"       "Nim"        ]
+        [ "node"      "Node"       ]
         [ "ocaml"     "OCaml"      ]
         [ "py"        "Python"     ]
         [ "rs"        "Rust"       ]
