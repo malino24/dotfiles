@@ -28,9 +28,6 @@
 
                 # direnv
                 ".direnv/"
-
-                # devenv
-                ".devenv/"
         ];
     };
 
