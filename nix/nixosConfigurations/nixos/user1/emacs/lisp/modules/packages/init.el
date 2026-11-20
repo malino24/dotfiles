@@ -1,5 +1,3 @@
-(load "~/.config/emacs/lisp/modules/packages/use-package.el")
-
 (load "~/.config/emacs/lisp/modules/packages/ansi-color.el")
 (load "~/.config/emacs/lisp/modules/packages/direnv.el")
 (load "~/.config/emacs/lisp/modules/packages/evil-mode.el")
@@ -10,6 +8,5 @@
 (load "~/.config/emacs/lisp/modules/packages/recentf.el")
 (load "~/.config/emacs/lisp/modules/packages/rust-mode.el")
 (load "~/.config/emacs/lisp/modules/packages/smex.el")
-(load "~/.config/emacs/lisp/modules/packages/theme.el")
 (load "~/.config/emacs/lisp/modules/packages/vterm-mode.el")
 (load "~/.config/emacs/lisp/modules/packages/which-key.el")

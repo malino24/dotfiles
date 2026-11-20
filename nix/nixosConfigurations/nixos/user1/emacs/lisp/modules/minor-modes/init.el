@@ -1,7 +1,0 @@
-(load "~/.config/emacs/lisp/modules/minor-modes/column-number-mode.el")
-(load "~/.config/emacs/lisp/modules/minor-modes/display-line-numbers-mode.el")
-(load "~/.config/emacs/lisp/modules/minor-modes/menu-bar-mode.el")
-(load "~/.config/emacs/lisp/modules/minor-modes/savehist-mode.el")
-(load "~/.config/emacs/lisp/modules/minor-modes/scroll-bar-mode.el")
-(load "~/.config/emacs/lisp/modules/minor-modes/tool-bar-mode.el")
-(load "~/.config/emacs/lisp/modules/minor-modes/whitespace-mode.el")
