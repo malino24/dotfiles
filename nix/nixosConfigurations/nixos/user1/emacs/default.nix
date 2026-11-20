@@ -5,6 +5,7 @@ let
 in
 {
     services.emacs.enable = true;
+    services.emacs.client.enable = true;
 
     programs.emacs = {
         enable = true;
