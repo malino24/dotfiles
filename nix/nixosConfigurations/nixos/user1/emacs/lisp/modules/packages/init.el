@@ -1,5 +1,5 @@
 (load "~/.config/emacs/lisp/modules/packages/ansi-color.el")
-(load "~/.config/emacs/lisp/modules/packages/direnv.el")
+(load "~/.config/emacs/lisp/modules/packages/envrc.el")
 (load "~/.config/emacs/lisp/modules/packages/evil-mode.el")
 (load "~/.config/emacs/lisp/modules/packages/ido-mode.el")
 (load "~/.config/emacs/lisp/modules/packages/lsp-mode.el")
