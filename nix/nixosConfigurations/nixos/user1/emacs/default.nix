@@ -27,6 +27,7 @@ in
     ];
 
     xdg.configFile."emacs/init.el".source = link "init.el";
+    xdg.configFile."emacs/lisp".source = link "lisp";
 
     home.shellAliases = {
         "ec" = "emacsclient -nc";
