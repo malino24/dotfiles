@@ -45,11 +45,6 @@
 ;; Font
 (add-to-list 'default-frame-alist '(font . "JetBrainsMono Nerd Font-18"))
 
-;; Custom keybinds
-(defun my/duplicate-line (&optional arg) (interactive "p") (duplicate-line arg) (next-line arg))
-(global-set-key (kbd "C-,") 'my/duplicate-line)
-(global-set-key (kbd "C-x c") 'compile)
-
 ;; dired
 (use-package nerd-icons-dired)
 (add-hook 'dired-mode-hook #'nerd-icons-dired-mode)
@@ -59,9 +54,6 @@
 (use-package envrc)
 (envrc-global-mode)
 (setq envrc-show-summary-in-minibuffer nil)
-
-;; ibuffer
-(global-set-key (kbd "C-x C-b") 'ibuffer)
 
 ;; ido
 (use-package ido)
