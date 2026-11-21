@@ -26,6 +26,7 @@
 
 ;; Preferences
 (setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
 (setq inhibit-splash-screen t)
 (setq inhibit-startup-screen t)
 (savehist-mode 1)
@@ -52,12 +53,12 @@
 ;; dired
 (use-package nerd-icons-dired)
 (add-hook 'dired-mode-hook #'nerd-icons-dired-mode)
-(setq dired-create-destination-dirs 'ask)
+(setq dired-create-destination-dirs 'always)
 
 ;; envrc
-(use-package envrc
-  :hook (after-init . envrc-global-mode)
-  :custom (envrc-show-summary-in-minibuffer nil))
+(use-package envrc)
+(envrc-global-mode)
+(setq envrc-show-summary-in-minibuffer nil)
 
 ;; ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
@@ -131,10 +132,8 @@
                          ;newline-mark
                          missing-newline-at-eof))
 
-(global-whitespace-mode 1) ; Disabled by default
+(global-whitespace-mode 1)
 
 ;; c-mode
-(setq-default indent-tabs-mode nil)
-(setq-default tab-width 4)
-(setq-default c-set-style "allman")
-(setq-default c-basic-offset 4)
+(add-hook c-mode-hook (lambda() ((c-set-style "bsd")
+                                 (setq c-basic-offset 4)))
