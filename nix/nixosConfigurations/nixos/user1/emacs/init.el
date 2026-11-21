@@ -14,13 +14,15 @@
 (setq warning-minimum-level :error)
 (setq native-comp-async-report-warnings-errors 'silent)
 
-;; Frame settings
+;; Minor modes for frame
 (tool-bar-mode 0)
 (menu-bar-mode 0)
 (scroll-bar-mode 0)
+(column-number-mode 1)
+
+;; Minor modes for buffer
 (global-display-line-numbers-mode 1)
 (setq display-line-numbers-type 'relative)
-(column-number-mode 1)
 
 ;; Preferences
 (setq-default indent-tabs-mode nil)
