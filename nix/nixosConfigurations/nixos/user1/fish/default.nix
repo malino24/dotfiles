@@ -5,5 +5,4 @@ let
 in
 {
     programs.fish.enable = true;
-    xdg.configFile."ghostty/config.fish".source = link ./config.fish;
 }
