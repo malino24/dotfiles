@@ -1,0 +1,25 @@
+if status is-interactive
+    # Commands to run in interactive sessions can go here
+end
+
+set -g fish_history_variable_max_size 0
+set -g fish_history_max_size 0
+
+alias cat='bat --color=auto --paging=never --style=plain'
+alias ls='eza --color=auto'
+alias lk='eza --color=auto --long --icons'
+alias ll='eza --color=auto --long --icons --all --classify=always --git --mounts --group'
+alias cd='z'
+alias cdi='zi'
+
+alias fzfp='fzf --preview="bat --color=always {}"'
+
+alias hg='history | grep'
+alias py='python3'
+alias csr='csharprepl'
+
+alias aur-malware-check='bash -c "comm -1 -2 <(pacman -Qq | sort) <(curl -s https://raw.githubusercontent.com/lenucksi/aur-malware-check/refs/heads/master/package_list.txt | sort)"'
+
+starship init fish | source
+fzf --fish | source
+zoxide init fish | source
