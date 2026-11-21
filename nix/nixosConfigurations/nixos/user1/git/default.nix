@@ -31,6 +31,16 @@
         ];
     };
 
+    programs.lazygit.enable = true;
+    programs.lazygit.enableBashIntegration = true;
+    programs.lazygit.enableZshIntegration = true;
+    programs.lazygit.enableFishIntegration = true;
+    programs.lazygit.enableNushellIntegration = true;
+
+    programs.gitui.enable = true;
+
+    home.packages = [ pkgs.git-graph ];
+
     home.shellAliases = {
         "gs" = "git status";
         "gss" = "git status --short";
