@@ -2,13 +2,8 @@
 
 {
     home.shellAliases = {
-        "stow" = "stow -t ~";
-
         "grep" = "grep --color=auto";
         "ls" = "ls --color=auto";
-
-        "ll" = "ls -bplh";
-        "la" = "ls -bplah";
 
         "clearf" = "printf \"\e[H\e[3J\"";
         "hg" = "history | grep";

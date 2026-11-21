@@ -9,5 +9,6 @@
 
     home.shellAliases = {
         "cd" = "z";
+        "cdi" = "zi";
     };
 }
