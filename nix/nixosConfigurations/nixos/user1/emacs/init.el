@@ -31,7 +31,7 @@
 (savehist-mode 1)
 (setq use-short-answers t)
 (setq visible-bell nil)
-(setq vc-follow-symlinks nil)
+(setq vc-follow-symlinks t)
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 (setenv "MANROFFOPT" "-c")
 
