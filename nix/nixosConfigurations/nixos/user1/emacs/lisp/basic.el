@@ -25,10 +25,11 @@
 (setq display-line-numbers-type 'relative)
 
 ;; Preferences
+(setq auto-save-default nil)
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 (setq inhibit-splash-screen t)
-(setq inhibit-startup-screen t)
+(setq make-backup-files nil)
 (savehist-mode 1)
 (setq use-short-answers t)
 (setq visible-bell nil)
