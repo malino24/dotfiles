@@ -73,6 +73,12 @@
 (add-hook 'ido-setup-hook
   (lambda () (define-key ido-completion-map (kbd "<C-return>") 'ido-select-text)))
 
+;; magit
+(use-package magit)
+(setq magit-auto-revert-mode nil)
+(global-set-key (kbd "C-c m s") 'magit-status)
+(global-set-key (kbd "C-c m l") 'magit-log)
+
 ;; multiple-cursors
 (use-package multiple-cursors)
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
