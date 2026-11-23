@@ -12,7 +12,18 @@ in
         package = pkgs.emacs-pgtk;
 
         extraPackages = epkgs: [
+            epkgs.base16-theme
+            epkgs.envrc
+            epkgs."ido-completing-read+"
+            epkgs.ido-vertical-mode
+            epkgs.magit
+            epkgs.move-text
+            epkgs.multiple-cursors
+            epkgs.nerd-icons-dired
+            epkgs.smex
+            epkgs.use-package
             epkgs.vterm
+            epkgs.which-key
         ];
     };
 

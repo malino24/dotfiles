@@ -8,7 +8,7 @@
 (package-initialize)
 
 (require 'use-package)
-(setq use-package-always-ensure t)
+(setq use-package-always-ensure nil)
 
 ;; Warnings
 (setq warning-minimum-level :error)
