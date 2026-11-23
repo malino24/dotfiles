@@ -5,3 +5,4 @@
 (load "keybinds.el")
 
 (load "c-mode.el")
+(load "simpc-mode.el")
