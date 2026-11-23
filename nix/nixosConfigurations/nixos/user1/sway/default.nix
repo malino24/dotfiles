@@ -6,24 +6,6 @@ in
 {
     xdg.configFile."sway/config".source = link "config";
 
-    qt = {
-        enable = true;
-        platformTheme.name = "gtk";
-        style.name = "breeze";
-    };
-
-    gtk = {
-        enable = true;
-        theme = {
-            name = "Breeze";
-            package = pkgs.kdePackages.breeze-gtk;
-        };
-        iconTheme = {
-            name = "breeze";
-            package = pkgs.kdePackages.breeze-icons;
-        };
-    };
-
     home.packages = with pkgs; [
         kdePackages.breeze
 
