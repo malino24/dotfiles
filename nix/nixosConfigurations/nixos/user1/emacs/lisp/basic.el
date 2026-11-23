@@ -79,6 +79,11 @@
 (global-set-key (kbd "C-c m s") 'magit-status)
 (global-set-key (kbd "C-c m l") 'magit-log)
 
+;; move-text
+(use-package move-text)
+(global-set-key (kbd "M-S-<up>") 'move-text-up)
+(global-set-key (kbd "M-S-<down>") 'move-text-down)
+
 ;; multiple-cursors
 (use-package multiple-cursors)
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
