@@ -26,5 +26,15 @@ in
 
     home.packages = with pkgs; [
         kdePackages.breeze
+
+        brightnessctl
+        grim
+        pavucontrol
+        pamixer
+        slurp
+        swayidle
+        swaylock
+        wl-clipboard
+        wmenu
     ];
 }

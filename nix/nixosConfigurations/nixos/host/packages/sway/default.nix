@@ -8,24 +8,6 @@
 
     programs.sway.extraOptions = [ "--unsupported-gpu" ];
 
-    programs.sway.extraPackages = with pkgs; [
-        brightnessctl
-        swayidle
-        swaylock
-
-        # Utils
-        wl-clipboard
-        wmenu
-
-        # Screenshot
-        grim
-        slurp
-
-        # Audio
-        pavucontrol
-        pamixer
-    ];
-
     security.rtkit.enable = true;
 
     services.pipewire.enable = true;
