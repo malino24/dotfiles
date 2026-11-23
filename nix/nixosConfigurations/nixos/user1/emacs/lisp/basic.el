@@ -19,6 +19,7 @@
 (menu-bar-mode 0)
 (scroll-bar-mode 0)
 (column-number-mode 1)
+(savehist-mode 1)
 
 ;; Minor modes for buffer
 (global-display-line-numbers-mode 1)
@@ -27,13 +28,12 @@
 ;; Preferences
 (setq auto-save-default nil)
 (setq-default indent-tabs-mode nil)
-(setq-default tab-width 4)
 (setq inhibit-splash-screen t)
 (setq make-backup-files nil)
-(savehist-mode 1)
+(setq-default tab-width 4)
 (setq use-short-answers t)
-(setq visible-bell nil)
 (setq vc-follow-symlinks t)
+(setq visible-bell nil)
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 (setenv "MANROFFOPT" "-c")
 
