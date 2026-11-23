@@ -14,6 +14,8 @@ format = """
 $username\
 $directory\
 $git_branch\
+$git_commit\
+$git_state\
 $status
 ${custom.suffix_user}\
 ${custom.suffix_root}
@@ -40,6 +42,20 @@ format = ' [$symbol$branch(:$remote_branch)]($style)'
 style = "purple"
 symbol = " "
 always_show_remote = false
+only_attached = true
+
+[git_commit]
+disabled = false
+format = ' [ $hash$tag]($style)'
+style = "purple"
+only_detached = true
+commit_hash_length = 7
+tag_disabled = true
+tag_max_candidates = 0
+
+[git_state]
+disabled = false
+format = ' \([$state( $progress_current/$progress_total)]($style)\)'
 
 [status]
 disabled = false
